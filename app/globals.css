@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Theme Colors */
+  --brand-primary: #0052cc;
+  --brand-primary-hover: #0747a6;
+  --brand-primary-active: #053b8c;
+  --brand-primary-light: #e9f2ff;
+  --brand-primary-text: #ffffff;
+
+  /* Accent Color (Logo checkmark) */
+  --brand-accent-green: #22c55e;
+  --brand-accent-green-hover: #16a34a;
+
+  /* Splash Screen Navy Theme */
+  --brand-splash-bg: #073474;
+  --brand-splash-top: #062f6a;
+  --brand-splash-bottom: #052654;
+  --brand-skyline-color: rgba(147, 197, 253, 0.25);
+  --brand-skyline-fill: rgba(14, 165, 233, 0.04);
+  --brand-skyline-window: rgba(255, 255, 255, 0.35);
+
+  /* Neutral Backgrounds */
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+
+  /* Typography Colors */
+  --text-heading: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-placeholder: #94a3b8;
+  --text-white: #ffffff;
+  --text-white-muted: rgba(255, 255, 255, 0.85);
+  --text-white-subtle: rgba(255, 255, 255, 0.65);
+
+  /* Borders & Dividers */
+  --border-light: #e2e8f0;
+  --border-input: #cbd5e1;
+  --border-focus: #0052cc;
+
+  /* Component Dimensions & Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-button: 0 4px 14px rgba(0, 82, 204, 0.25);
+  --shadow-input: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 10px -2px rgba(0, 0, 0, 0.02);
+  --shadow-device: 0 25px 60px -15px rgba(15, 23, 42, 0.22), 0 0 0 1px rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-primary-light: var(--brand-primary-light);
+  --color-brand-green: var(--brand-accent-green);
+  --color-brand-splash: var(--brand-splash-bg);
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-border-light: var(--border-light);
+  --color-border-input: var(--border-input);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom scrollbars for presentation */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-heading);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
